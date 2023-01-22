@@ -26,7 +26,7 @@ connectToDatabase(ATLAS_URI)
        app.use("/trains", trainRouter)
        app.use("/shedules", sheduleRouter)
        // start the Express server
-       app.listen(5200, () => {
+       app.listen(80, () => {
            console.log(`Server running at http://localhost:5200...`);
        });
  
