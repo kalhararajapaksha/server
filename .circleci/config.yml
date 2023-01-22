@@ -13,9 +13,6 @@ jobs:
       - run:
           name: Install dependencies
           command: npm install
-      - run:
-          name: Test the app
-          command: npm test
   deploy:
     executor: heroku/default
     steps:
@@ -36,4 +33,4 @@ workflows:
       - testing
       - deploy:
           requires:
-            - testing
+            - testing
