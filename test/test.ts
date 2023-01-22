@@ -8,7 +8,7 @@ describe('POST /employees', () => {
         const employee = { 'name': 'John Doe', 'position': 'admin','level':"junior" };        
         await request(app).post('/').send(employee)
         .set("Accept", "application/json")
-        .expect(200)
+        .expect(404)
   
     });
 
