@@ -33,4 +33,4 @@ workflows:
       - testing
       - deploy:
           requires:
-              -testing
+            - testing
