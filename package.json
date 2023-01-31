@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "jest --detectOpenHandles",
-    "test:watch": "jest --watch"
+    "start": "nodemon src/server.ts",
+    "test": "jest --detectOpenHandles --forceExit",
+    "test:watch": "jest --watch"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +15,7 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "mongodb": "^4.13.0",
+    "nodemon": "^2.0.20",
     "websocket": "^1.0.34"
   },
   "devDependencies": {

@@ -12,3 +12,14 @@ trainRouter.get("/", async (_req, res) => {
         res.status(500).send(error.message);
     }
  });
+
+ trainRouter.get("/:id", async (req, res) => {
+    try {
+        //const date = new Date(req.params.date);
+        const query = { train_name: { $eq: req.params.id } };
+        const user = await collections.users.findOne({query});
+        res.status(200).send(user);
+    } catch (error) {
+        res.status(500).send(error.message);
+    }
+ });
