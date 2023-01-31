@@ -24,4 +24,19 @@ describe("User login and singUp test", () => {
             });
     });
 
+    it("user registration", function (done) {
+        request(app)
+            .post("/Users")
+            .send({username: "wani", password: "wani", email: "wani@gmail.com", name: "wani"})
+            .set("Accept", "application/json")
+            // .expect(200)
+            .end(function (err, res) {
+                if (err) {
+                    return done(err);
+                }
+                console.log(res.body)
+                return done();
+            });
+    });
+
 });
